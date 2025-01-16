@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>UTS-WEB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  body{
+    background-color: #266145;
+    font-family: "Poppins", sans-serif;
+    margin: 0%;
+    z-index: 0;
+  }
+
+  header{
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    color: rgb(29, 29, 29);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  nav{
+    margin-left: 25px;
+    margin-right: 15px;
+    transform: translateY(-25px);
+  }
+
+  ul{
+    overflow: hidden;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    text-align: end;
+    color: #266145;
+    font-size: larger ;
+  }
+
+  a{
+    color: #266145;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: 700;
+    transition: transform 0.3s ease; /* Animasi smooth */
+    cursor: pointer;
+  }
+
+  a:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.5);
+  }
+
+  header img{
+    margin-left: 15px;
+    transform: translateY(15px);
+    width: 10%;
+  }
+
+  .content1{
+    margin-top: 70px;
+    padding-left: 5%;
+    padding-top: 5%;
+    color: white;
+    margin-right: 50%;
+    margin-bottom: -375px;
+  }
+
+  .content1 ol{
+    list-style-type: decimal;
+  }
+
+  aside{
+    margin-top: 100px;
+    margin-left: 50%;
+    transform: translateY(-600px);
+  }
+
+  .content2{
+    background-color: white;
+    transform: translateY(-1350px);
+    margin-right: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 10%;
+    margin-top: 40px;
+    color: #266145;
+  }
+
+  footer{
+    background-color: #1f1f1f;
+    transform: translateY(-1475px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  footer p{
+    color: white;
+  }
+
+  aside div{
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.356); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.425);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    margin: 5%;
+    transform: translateY(-500px);
+    color: #266145;
+    padding-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 15%;
+  }
+
+  aside h2{
+    font-weight: 800;
+    text-shadow: 0 0 10px #ffffff;
+  }
+
+  aside p{
+    font-weight: 600;
+    text-shadow: 0 0 10px #ffffff;
+  }
+
+  aside img{
+    transform: translateY(175px);
+  }
+</style>
+
+<body>
+
+<header>
+  <a href=""><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+  <nav>
+  <ul>
+    <a href="/">Home</a> |
+    <a href="/konten">Content</a> |
+    <a href="/about">Tentang Kami</a> |
+    <a href="/kontak">Kontak</a> 
+  </ul>
+</nav>
+</header>  
+
+<section class="content1">
+  <article>
+    <h2>VISI</h2>
+    <h3>Menjadi Perusahaan Pengelola Hutan Berkelanjutan dan Bermanfaat Bagi Masyarakat</h3><br>
+    <p>PERHUTANI mendedikasikan diri bagi Indonesia dengan kemampuan maksimal, bersinergi dengan 
+       semua pihak, mengikuti perkembangan dunia, demi memegang teguh kepercayaan yang diberikan.</p><br>
+    <h2>MISI</h2><br>
+    <ol style="list-style-type: decimal; margin-right: 30px;">
+      <li>Mengelola Sumberdaya Hutan Secara Lestari</li>
+      <li>Peduli Kepada Kepentingan Masyarakat dan Lingkungan</li>
+      <li>Mengoptimalkan Bisnis Kehutanan dengan Prinsip Good Corporate Governance</li>
+    </ol>
+    
+  </article>
+</section>
+
+<aside>
+  <section>
+    <img src="{{ url_for('static', filename='images/Slider-1.jpg') }}" alt="">
+    <div>
+      <h2>TERUS HIJAUKAN NEGERI</h2><br>
+      <p>Perhutani mengelola sumberdaya hutan di pulau Jawa 
+        dan Madura senantiasa menerapkan prinsip-prinsip kelestarian 
+        dan good corporate governance.</p>
+    </div>
+  </section>
+</aside>
+
+<section class="content2">
+  <h2>Unit Bisnis</h2><br>
+  <p id="list1"></p>
+</section>
+
+<footer>
+  <p>Prototype Website by Bima Sunu Aryasatya</p>
+  <p>UTS Pemrograman WEB</p>
+  <p>23090043</p>
+</footer>
+
+<script>
+  const unitBisnis = [];
+        unitBisnis[0] = "Pengelolaan Hutan";
+        unitBisnis[1] = "Produksi Kayu";
+        unitBisnis[2] = "Pengelolaan Sumber Daya Alam";
+        unitBisnis[3] = "Pengembangan Energi Terbarukan";
+        unitBisnis[4] = "Pengelolaan Pariwisata Hutan";
+        unitBisnis[5] = "Industri Kehutanan";
+        unitBisnis[6] = "Pengelolaan Lingkungan";
+        // document.getElementById("list1").innerHTML = unitBisnis.join("<br>");
+        let list = "";
+        unitBisnis.forEach((item, index) => {
+            list += (index + 1) + ". " + item + "<br>";
+        });
+
+        document.getElementById("list1").innerHTML = list;
+</script>
+
+</body>
+
+
+
+</html>

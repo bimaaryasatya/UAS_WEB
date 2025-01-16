@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            background-color: #266145;
+            overflow-y: hidden;
+        }
+
+        header{
+          background-color: #ffffff;
+          position: fixed;
+          width: 100%;
+          color: rgb(29, 29, 29);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+          height: 7%;
+          overflow-y: hidden;
+          z-index: 9999;
+        }
+
+        nav{
+          margin-left: 70%;
+          margin-right: 10px;
+          transform: translateY(-40px);
+        }
+
+        ul{
+          overflow: hidden;
+          list-style: none;
+          padding: 0%;
+          margin: 0%;
+          text-align: end;
+          color: #266145;
+          font-size: larger ;
+        }
+
+        a{
+          color: #266145;
+          text-decoration: none;
+          font-weight: 600;
+          margin-right: 5px;
+          margin-left: 5px;
+          font-weight: 700;
+        }
+
+        main {
+          transform: translateY(100px);
+          padding: 20px;
+          background-color: #ffffff;
+          margin: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+        }
+        h2 {
+            color: #004d26;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #004d26;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer{
+          height: 40px;
+          position: relative;
+          transform: translateY(430px);
+          text-align: center;
+          background-color: #1f1f1f;
+          padding-bottom: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+          color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <a href=""><img src="./IMG/logo.png" alt="logo"></a>
+    <nav>
+        <ul>
+            <a href="/">Home</a> |
+            <a href="/konten">Content</a> |
+            <a href="/about">Tentang Kami</a> |
+            <a href="/kontak">Kontak</a>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="tentang-kami">
+        <h2>Tentang Kami</h2>
+        <p>Perhutani adalah perusahaan yang berdedikasi untuk mengelola sumber daya hutan secara lestari di Pulau Jawa dan Madura, menjaga prinsip kelestarian dan tata kelola perusahaan yang baik.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Unit Bisnis</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody id="unit-bisnis-list">
+                <!-- Daftar unit bisnis akan dimuat dengan JavaScript -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>2024. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const unitBisnis = [
+            { nama: 'Pengelolaan Hutan', deskripsi: 'Mengelola hutan dengan prinsip kelestarian.' },
+            { nama: 'Produksi Kayu', deskripsi: 'Memproduksi kayu secara berkelanjutan.' },
+            { nama: 'Pengelolaan SDA', deskripsi: 'Pengelolaan sumber daya alam yang terbarukan.' },
+            { nama: 'Energi Terbarukan', deskripsi: 'Pengembangan energi yang ramah lingkungan.' },
+            { nama: 'Pariwisata Hutan', deskripsi: 'Mendorong wisata berkelanjutan di area hutan.' },
+            { nama: 'Industri Kehutanan', deskripsi: 'Industri berbasis hasil hutan.' },
+            { nama: 'Pengelolaan Lingkungan', deskripsi: 'Program untuk konservasi dan lingkungan.' }
+        ];
+
+        const tableBody = document.getElementById('unit-bisnis-list');
+        unitBisnis.forEach(unit => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${unit.nama}</td><td>${unit.deskripsi}</td>`;
+            tableBody.appendChild(row);
+        });
+    });
+</script>
+
+</body>
+</html>

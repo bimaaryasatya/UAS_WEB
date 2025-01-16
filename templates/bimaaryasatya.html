@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      background: rgb(27,27,27);
+      background: linear-gradient(180deg, rgba(27,27,27,1) 0%, rgba(60,60,60,1) 35%, rgba(91,144,154,1) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    footer{
+      margin-top: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 5%;
+        background-color: #333;
+        color: white;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    section {
+        padding: 4rem 5%;
+    }
+
+    .hero {
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    footer{
+      background-color: #333;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .container{
+      color: #ffffff;
+    }
+
+    .container-2{
+      background: rgba(255, 255, 255, 0.11);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 40px;
+      margin-right: 50%;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .about-image{
+      transform: translate(1000px,-275px);
+    }
+
+    .social-links a{
+      list-style: none;
+      color: #ffffff;
+    }
+
+    .contact{
+      align-content: center;
+    }
+
+    .project-card img {
+      max-height: 200px;
+      width: auto;
+      object-fit: cover;
+      scroll-snap-align: start;
+    }
+
+    .imgg{
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Bima Sunu Aryasatya</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hai, Saya Bima Sunu Aryasatya</h1>
+            <h2>Mahasiswa</h2>
+            <br><p>Saya adalah seorang mahasiswa yang sekarang mengampu pendidikan di Politeknik Harapan Bersama Tegal</p>
+            <br><a href="#contact" class="btn">Hubungi Saya</a>
+        </div>
+    </section>
+    <div class="imgg">
+      <img src="{{ url_for('static', filename='images/DSC04080.jpg') }}" alt="Foto Profil" style="width: 40%;">
+      <img src="{{ url_for('static', filename='images/_DSC4256-Enhanced-NR-Edit-2-Edit-2.jpg') }}" alt="Foto Profil" style="width: 40%;">
+      <img src="{{ url_for('static', filename='images/_DSC4054-Enhanced-NR-Edit-SR.jpg') }}" alt="Foto Profil" style="width: 40%;">
+      <img src="{{ url_for('static', filename='images/_DSC0169.jpg') }}" alt="Foto Profil" style="width: 40%;">
+    </div>  
+    <section id="about" class="about">
+        <div class="container"">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Saya adalah mahasiswa yang saat ini sedang belajar menjadi software/web developer</p>
+                    <br>
+                    <h3>Keahlian</h3><br>
+                    <div class="skills">
+                        <div class="skill">
+                            <span>1. HTML/CSS</span>
+                            <div class="skill-bar" style="width: 90%;"></div>
+                        </div>
+                        <div class="skill">
+                            <span>2. Fotografi</span>
+                            <div class="skill-bar" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill">
+                            <span>3. Desain Grafis FX</span>
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
+                        <div class="skill">
+                          <span>4. Video Editor</span>
+                          <div class="skill-bar" style="width: 75%;"></div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container-2">
+            <h2>Proyek Saya</h2><br>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='images/Screenshot 2024-11-14 182447.png') }}" alt="Proyek 1">
+                    <img src="{{ url_for('static', filename='images/Screenshot 2024-11-14 182729.png') }}" alt="Proyek 1">
+                    <br><br><h3>Aplikasi Point of Sales</h3>
+                    <p>Proyek ini membuat sebuah aplikasi kasir sederhana sebagai bentuk pembelajaran pemrograman komputer dengan bahasa pemrograman yang digunakan adalah Java</p>
+                    <br><a href="https://github.com/bimaaryasatya/Kasir" class="btn" target="_blank">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container-2">
+            <h2>Hubungi Saya</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <i class="icon-email">Email: </i>
+                    <span>bimarailfansslw69@gmail.com</span>
+                </div>
+                <div class="contact-method">
+                    <i class="icon-phone">Telepon: </i>
+                    <span>+62 812-2618-1743</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/bimazznxt7717/" class="linkedin" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/bimaaryasatya" class="github" target="_blank">GitHub</a>
+                    <a href="https://www.instagram.com/bimazznxt/" class="instagram" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bima Aryasatya.</p>
+    </footer>
+
+    <!-- Script untuk scroll ke section yang dituju dari tombol nav -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+      function revealOnScroll() {
+          var reveals = document.querySelectorAll('.reveal');
+          
+          reveals.forEach(reveal => {
+              var windowHeight = window.innerHeight;
+              var revealTop = reveal.getBoundingClientRect().top;
+              var revealPoint = 150;
+
+              if (revealTop < windowHeight - revealPoint) {
+                  reveal.classList.add('active');
+              } else {
+                  reveal.classList.remove('active');
+              }
+          });
+      }
+
+      window.addEventListener('scroll', revealOnScroll);
+    </script>
+</body>
+</html>
